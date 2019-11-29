@@ -1,30 +1,41 @@
 import React from 'react';
-import { View, Image, Text, TextInput, Button } from 'react-native';
+import { View, Image, TextInput, Text, TouchableOpacity } from 'react-native';
 
-import styles from './styles';
+import style from './styles';
 
-export default function SignUp() {
+export default function Location({ navigation }) {
   return (
-    <View style={styles.container}>
-   <Image resizeMode="contain" source={require('../../assets/logo.png')} style={styles.image}/>
-   <Text  style={styles.text}>que tal você colocar sua localização?</Text>
-   <View style={styles.viewInput}>
-      <TextInput
-        style={styles.textInput} placeholder= '  CEP'
+    <View style={style.container}>
+     <Image resizeMode="contain" source={require('../../assets/logo.png')} style={style.image}/>
+     <TextInput
+        style={style.textInput}
+        placeholder= '  Nome completo'
       />
       <TextInput
-        style={styles.textInput} placeholder= '  Rua'
+        style={style.textInput}
+        placeholder= '  CPF'
       />
       <TextInput
-        style={styles.textInput} placeholder= '  Bairro'
+        style={style.textInput}
+        placeholder= '  Celular'
       />
       <TextInput
-        style={styles.textInput} placeholder= '  Complemento'
+        style={style.textInput}
+        placeholder= '  E-mail'
       />
-      <TextInput style={styles.numero} placeholder= '  Número'
+      <TextInput
+        style={style.textInput}
+        placeholder= '  E-mail'
       />
+
+      <TouchableOpacity style={style.button}>
+        <Text style={style.textButton}>Registrar</Text>
+      </TouchableOpacity>
+
+      <View style={style.login}>
+        <Text  style={style.text}>Já possui conta?</Text>
+        <Text  style={style.loginText} onPress={() => navigation.navigate('Login')}> Login</Text>
       </View>
-      <Button style={styles.button} title= 'Confirmar Endereço'/>
     </View>
   );
 }
