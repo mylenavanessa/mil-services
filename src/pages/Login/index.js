@@ -6,24 +6,24 @@ import styles from './styles';
 export default function Login({ navigation }) {
   return (
     <View style={styles.container}>
-     <Image resizeMode="contain" source={require('../../assets/logo.png')} style={styles.image}/>
+      <Image resizeMode="contain" source={require('../../assets/logo.png')} style={styles.image} />
       <TextInput
         style={styles.textInput}
-        placeholder= 'E-mail'
+        placeholder='E-mail'
       />
       <TextInput
         style={styles.textInput}
         secureTextEntry={true}
-        placeholder= 'Senha'
+        placeholder='Senha'
       />
 
-      <TouchableOpacity style={styles.button} >
+      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Profile')}>
         <Text style={styles.textButton}>LOGIN</Text>
       </TouchableOpacity>
 
       <View style={styles.signUp}>
-        <Text  style={styles.text}>Ainda não possui conta?</Text>
-        <Text  style={styles.signUpText} onPress={() => navigation.navigate('Location')}> Registre-se grátis</Text>
+        <Text style={styles.text}>Ainda não possui conta?</Text>
+        <Text style={styles.signUpText} onPress={() => navigation.navigate('Location')}> Registre-se grátis</Text>
       </View>
     </View>
   );
