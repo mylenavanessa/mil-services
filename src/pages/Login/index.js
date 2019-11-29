@@ -20,14 +20,14 @@ export default function Login({ navigation }) {
 
 
     if (data.authentication) 
-      navigation.navigate('Location')
+      navigation.navigate('Profile')
     else
       Alert.alert('Dados incorretos, tente novamente')
   }
 
   return (
     <View style={styles.container}>
-     <Image resizeMode="contain" source={require('../../assets/logo.png')} style={styles.image}/>
+      <Image resizeMode="contain" source={require('../../assets/logo.png')} style={styles.image} />
       <TextInput
         style={styles.textInput}
         placeholder= 'E-mail'
@@ -51,8 +51,8 @@ export default function Login({ navigation }) {
       </TouchableOpacity>
 
       <View style={styles.signUp}>
-        <Text  style={styles.text}>Ainda não possui conta?</Text>
-        <Text  style={styles.signUpText} onPress={() => navigation.navigate('Location')}> Registre-se grátis</Text>
+        <Text style={styles.text}>Ainda não possui conta?</Text>
+        <Text style={styles.signUpText} onPress={() => navigation.navigate('Location')}> Registre-se grátis</Text>
       </View>
     </View>
   );
