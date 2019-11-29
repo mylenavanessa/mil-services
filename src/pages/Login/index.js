@@ -22,7 +22,7 @@ export default function Login({ navigation }) {
 
       <View style={styles.signUp}>
         <Text  style={styles.text}>Ainda não possui conta?</Text>
-        <Text  style={styles.signUpText} onPress={() => navigation.navigate('SignUp')}> Registre-se grátis</Text>
+        <Text  style={styles.signUpText} onPress={() => navigation.navigate('Location')}> Registre-se grátis</Text>
       </View>
     </View>
   );
