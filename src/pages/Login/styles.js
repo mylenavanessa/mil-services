@@ -24,16 +24,30 @@ const styles = StyleSheet.create({
   },
   button: {
     width: '30%',
+    height: 40,
+    backgroundColor: '#1E90FF',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 4,
+    shadowOffset:{  width: 0,  height: 3  },
+    shadowColor: 'black',
+    shadowOpacity: 0.4,
   },
   text: {
-    fontSize: 10,
+    fontSize: 15,
+    borderRadius: 2
+  },
+  textButton: {
+    color: 'white',
+    fontWeight:'bold',
+
   },
   signUp: {
     marginTop: 25,
     flexDirection: 'row'
   },
   signUpText:{
-    fontSize: 10,
+    fontSize: 15,
     color: '#01337f'
   }
 });

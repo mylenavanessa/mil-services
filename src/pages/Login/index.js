@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, Button, Image, TextInput } from 'react-native';
+import { View, Text, TouchableOpacity, Image, TextInput } from 'react-native';
 
 import styles from './styles';
 
@@ -15,7 +15,10 @@ export default function Login({ navigation }) {
         style={styles.textInput}
         placeholder= '  Senha'
       />
-      <Button  style={styles.button} title= 'LOGIN'/>
+
+      <TouchableOpacity style={styles.button} >
+        <Text style={styles.textButton}>LOGIN</Text>
+      </TouchableOpacity>
 
       <View style={styles.signUp}>
         <Text  style={styles.text}>Ainda não possui conta?</Text>
