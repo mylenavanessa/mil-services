@@ -2,9 +2,10 @@ import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
   container : {
-    marginTop: 30,
-    justifyContent: 'center',
-    alignItems: 'center'
+    marginTop: -30,
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    height: 300
   },
   image: {
     aspectRatio: 1,
@@ -14,7 +15,7 @@ const styles = StyleSheet.create({
     marginVertical: 20,
   },
   button: {
-    width: '50%',
+    width: '70%',
     height: 40,
     backgroundColor: '#1E90FF',
     alignItems: 'center',
@@ -23,16 +24,21 @@ const styles = StyleSheet.create({
     shadowOffset:{  width: 0,  height: 3  },
     shadowColor: 'black',
     shadowOpacity: 0.4,
+    marginBottom: 50
   },
   text: {
-    fontSize: 15,
-    borderRadius: 2
+    fontSize: 24,
+    borderRadius: 2,
+    marginBottom: 40
   },
   textButton: {
     color: 'white',
     fontWeight:'bold',
-
-  }
+  },
+  viewButton: {
+    height: 300,
+    justifyContent: 'space-between'
+   }
 });
   
   export default styles;

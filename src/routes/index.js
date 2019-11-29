@@ -5,12 +5,14 @@ import Login from '../pages/Login'
 import SignUp from '../pages/SignUp'
 import Location from '../pages/Location'
 import Profile from '../pages/Profile'
+import Person from  '../pages/Person'
 
 const Router = createStackNavigator({
   Login,
   SignUp,
   Location,
-  Profile
+  Profile,
+  Person
 })
 
 export default createAppContainer(Router)
