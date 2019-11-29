@@ -16,10 +16,12 @@ export default function Login({ navigation }) {
       type_user: 'client'
     })
 
-    if (data) 
-      navigation.navigate('Profile')
-    else
+    if (data)  {
+      const { name, cpf, phone, email, password, service_id } = data;
+      navigation.navigate('Profile', { name, cpf, phone, email, password })
+    } else {
       Alert.alert('Dados incorretos, tente novamente')
+    }
   }
 
   return (

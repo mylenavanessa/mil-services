@@ -4,13 +4,16 @@ import { createStackNavigator } from 'react-navigation-stack'
 import Login from '../pages/Login'
 import SignUp from '../pages/SignUp'
 import Location from '../pages/Location'
-import Profile from '../pages/Profile'
+import Profile, { navigationOptions } from '../pages/Profile'
 
 const Router = createStackNavigator({
   Login,
+  Profile: {
+    screen: Profile,
+    navigationOptions: navigationOptions,
+  },
   SignUp,
   Location,
-  Profile
 })
 
 export default createAppContainer(Router)

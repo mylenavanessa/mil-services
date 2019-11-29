@@ -1,20 +1,21 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions } from 'react-native';
 
 
 const styles = StyleSheet.create({
   container: {
-    marginTop: 30,
+    flex: 1,
     justifyContent: 'center',
     alignItems: 'center'
   },
   textInput: {
-    width: '90%',
+    width: Dimensions.get('screen').width - 20,
     height: 40,
     borderRadius: 5,
     borderWidth: 1,
     marginBottom: 25,
     borderColor: '#c3c9cb',
     paddingLeft: 10,
+    fontSize: 15,
   },
   image: {
     aspectRatio: 1,
@@ -35,9 +36,20 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.4,
   },
   removeButton: {
-    width: '30%',
+    width: Dimensions.get('screen').width - 20,
     height: 40,
     backgroundColor: '#E60202',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 4,
+    shadowOffset: { width: 0, height: 3 },
+    shadowColor: 'black',
+    shadowOpacity: 0.4,
+  },
+  updateButton: {
+    width: Dimensions.get('screen').width - 20,
+    height: 40,
+    backgroundColor: '#1E90FF',
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 4,
