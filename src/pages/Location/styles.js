@@ -12,16 +12,18 @@ const styles = StyleSheet.create({
       borderRadius: 5,
       borderWidth: 1,
       marginBottom: 25,
-      borderColor: '#c3c9cb'
+      borderColor: '#c3c9cb',
+      paddingLeft: 10
     },
     numero: {
-      width: '30%',
+      width: '40%',
       height: 40,
       borderRadius: 5,
       borderWidth: 1,
       marginBottom: 25,
       alignSelf:'flex-start',
-      borderColor: '#c3c9cb'
+      borderColor: '#c3c9cb',
+      paddingLeft: 10
     },
     image: {
       aspectRatio: 1,
@@ -38,12 +40,10 @@ const styles = StyleSheet.create({
       marginBottom: 30,
       marginTop: -30,
       height: 'auto',
-
     },
     viewInput: {
-       width:'60%'
-  
-      }
+      width:'60%',
+    }
   });
   
   export default styles;

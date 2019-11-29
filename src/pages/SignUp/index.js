@@ -9,23 +9,24 @@ export default function Location({ navigation }) {
      <Image resizeMode="contain" source={require('../../assets/logo.png')} style={style.image}/>
      <TextInput
         style={style.textInput}
-        placeholder= '  Nome completo'
+        placeholder= 'Nome completo'
       />
       <TextInput
         style={style.textInput}
-        placeholder= '  CPF'
+        placeholder= 'CPF'
       />
       <TextInput
         style={style.textInput}
-        placeholder= '  Celular'
+        placeholder= 'Celular'
       />
       <TextInput
         style={style.textInput}
-        placeholder= '  E-mail'
+        placeholder= 'E-mail'
       />
       <TextInput
         style={style.textInput}
-        placeholder= '  E-mail'
+        secureTextEntry={true}
+        placeholder= 'Senha'
       />
 
       <TouchableOpacity style={style.button}>

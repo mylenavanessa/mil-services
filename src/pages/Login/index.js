@@ -9,11 +9,12 @@ export default function Login({ navigation }) {
      <Image resizeMode="contain" source={require('../../assets/logo.png')} style={styles.image}/>
       <TextInput
         style={styles.textInput}
-        placeholder= '  E-mail'
+        placeholder= 'E-mail'
       />
       <TextInput
         style={styles.textInput}
-        placeholder= '  Senha'
+        secureTextEntry={true}
+        placeholder= 'Senha'
       />
 
       <TouchableOpacity style={styles.button} >

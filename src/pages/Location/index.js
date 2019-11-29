@@ -10,18 +10,18 @@ export default function SignUp({ navigation }) {
    <Text  style={styles.text}>que tal você colocar sua localização?</Text>
    <View style={styles.viewInput}>
       <TextInput
-        style={styles.textInput} placeholder= '  CEP'
+        style={styles.textInput} placeholder= 'CEP'
       />
       <TextInput
-        style={styles.textInput} placeholder= '  Rua'
+        style={styles.textInput} placeholder= 'Rua'
       />
       <TextInput
-        style={styles.textInput} placeholder= '  Bairro'
+        style={styles.textInput} placeholder= 'Bairro'
       />
       <TextInput
-        style={styles.textInput} placeholder= '  Complemento'
+        style={styles.textInput} placeholder= 'Complemento'
       />
-      <TextInput style={styles.numero} placeholder= '  Número'
+      <TextInput style={styles.numero} placeholder= 'Número'
       />
       </View>
       <Button style={styles.button} title= 'Confirmar Endereço' onPress={() => navigation.navigate('SignUp')}/>
