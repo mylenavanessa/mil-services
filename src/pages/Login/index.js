@@ -10,16 +10,13 @@ export default function Login({ navigation }) {
   const [password, setPassword] = useState('')
 
   async function login(){
-    console.log('entroou')
-    console.log(email, password)
-    const {data} = await api.get('/auth', {
+    const {data} = await api.post('/auth', {
       email,
       password,
       type_user: 'client'
     })
 
-
-    if (data.authentication) 
+    if (data) 
       navigation.navigate('Profile')
     else
       Alert.alert('Dados incorretos, tente novamente')
