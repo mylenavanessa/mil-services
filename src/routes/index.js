@@ -8,7 +8,12 @@ import Profile, { navigationOptions } from '../pages/Profile'
 import Person from  '../pages/Person'
 
 const Router = createStackNavigator({
-  Login,
+  Login: {
+    screen: Login,
+    navigationOptions: {
+      header: null
+    }
+  },
   Profile: {
     screen: Profile,
     navigationOptions: navigationOptions,

@@ -1,30 +1,35 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Dimensions} from 'react-native';
 
-
+const { height } = Dimensions.get('screen')
 const styles = StyleSheet.create({
   container : {
     marginTop: 30,
-    justifyContent: 'center',
+    alignItems: 'center',
+    height: height - 50,
+    justifyContent: 'space-between'
+  },
+  form : {
+    width: '60%',
     alignItems: 'center'
   },
   textInput: {
-    width: '60%',
+    width: '100%',
     height: 40,
     borderRadius: 5,
     borderWidth: 1,
-    marginBottom: 25,
+    marginBottom: 30,
     borderColor: '#c3c9cb',
     paddingLeft: 10
   },
   image: {
     aspectRatio: 1,
-    width: 150,
+    width: 200,
     height: 'auto',
     alignSelf: 'center',
     marginVertical: 20,
   },
   button: {
-    width: '30%',
+    width: '50%',
     height: 40,
     backgroundColor: '#1E90FF',
     alignItems: 'center',
@@ -41,11 +46,9 @@ const styles = StyleSheet.create({
   textButton: {
     color: 'white',
     fontWeight:'bold',
-
   },
   signUp: {
-    marginTop: 25,
-    flexDirection: 'row'
+    flexDirection: 'row',
   },
   signUpText:{
     fontSize: 15,
