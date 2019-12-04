@@ -63,7 +63,8 @@ export default function SignUp({ navigation }) {
             street,
             district,
             complement,
-            number
+            number,
+            client: true
           })}
         >
         <Text style={styles.textButton}>Confirmar Endereço</Text>

@@ -13,28 +13,31 @@ export default function Location({ navigation }) {
   const [password, setPassword] = useState('')
 
   async function signUp() {
-    const address =  {
-      'zip_code': navigation.getParam('zipCode'),
-      street: navigation.getParam('street'),
-      district: navigation.getParam('district'),
-      complement: navigation.getParam('complement'),
-      number: navigation.getParam('number')
-    }
+    const client = navigation.getParam('client')
+    if (client) {
+      const address =  {
+        'zip_code': navigation.getParam('zipCode'),
+        street: navigation.getParam('street'),
+        district: navigation.getParam('district'),
+        complement: navigation.getParam('complement'),
+        number: navigation.getParam('number')
+      }
 
-    const { data } = await api.post('/clients', {
-      name,
-      cpf,
-      phone,
-      email,
-      password,
-      address
-    })
+      const { data } = await api.post('/clients', {
+        name,
+        cpf,
+        phone,
+        email,
+        password,
+        address
+      })
 
-    if (data._id) {
-      navigation.navigate('Profile')
-    }
-    else{
-      Alert.alert('Erro ao registrar, tente novamente')
+      if (data._id)
+        navigation.navigate('Profile')
+      else
+        Alert.alert('Erro ao registrar, tente novamente')
+    } else {
+      console.log('funcionario')
     }
   } 
 
