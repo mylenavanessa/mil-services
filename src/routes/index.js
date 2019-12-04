@@ -5,7 +5,8 @@ import Login from '../pages/Login'
 import SignUp from '../pages/SignUp'
 import Location from '../pages/Location'
 import Profile, { navigationOptions } from '../pages/Profile'
-import Person from  '../pages/Person'
+import Person from '../pages/Person'
+import Home from '../pages/Home/'
 
 const Router = createStackNavigator({
   Login: {
@@ -18,9 +19,10 @@ const Router = createStackNavigator({
     screen: Profile,
     navigationOptions: navigationOptions,
   },
+  Home,
   SignUp,
   Location,
-  Person
+  Person,
 })
 
-export default createAppContainer(Router)
+export default createAppContainer(Router);
