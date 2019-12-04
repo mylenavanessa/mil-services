@@ -13,7 +13,7 @@ export default function Location({ navigation }) {
   const [password, setPassword] = useState('')
 
   async function signUp() {
-    const address =  {
+    const address = {
       'zip_code': navigation.getParam('zipCode'),
       street: navigation.getParam('street'),
       district: navigation.getParam('district'),
@@ -31,19 +31,19 @@ export default function Location({ navigation }) {
     })
 
     if (data._id) {
-      navigation.navigate('Profile')
+      navigation.navigate('Profile', { name, cpf, phone, email, password })
     }
-    else{
+    else {
       Alert.alert('Erro ao registrar, tente novamente')
     }
-  } 
+  }
 
   return (
     <View style={style.container}>
-     <Image resizeMode="contain" source={require('../../assets/logo.png')} style={style.image}/>
-     <TextInput
+      <Image resizeMode="contain" source={require('../../assets/logo.png')} style={style.image} />
+      <TextInput
         style={style.textInput}
-        placeholder= 'Nome completo'
+        placeholder='Nome completo'
         autoCapitalize='none'
         autoCorrect={false}
         value={name}
@@ -51,7 +51,7 @@ export default function Location({ navigation }) {
       />
       <TextInput
         style={style.textInput}
-        placeholder= 'CPF'
+        placeholder='CPF'
         autoCapitalize='none'
         autoCorrect={false}
         value={cpf}
@@ -59,7 +59,7 @@ export default function Location({ navigation }) {
       />
       <TextInput
         style={style.textInput}
-        placeholder= 'Celular'
+        placeholder='Celular'
         autoCapitalize='none'
         autoCorrect={false}
         value={phone}
@@ -67,8 +67,8 @@ export default function Location({ navigation }) {
       />
       <TextInput
         style={style.textInput}
-        placeholder= 'E-mail'
-        keyboardType= 'email-address'
+        placeholder='E-mail'
+        keyboardType='email-address'
         autoCapitalize='none'
         autoCorrect={false}
         value={email}
@@ -77,8 +77,8 @@ export default function Location({ navigation }) {
       <TextInput
         style={style.textInput}
         secureTextEntry={true}
-        placeholder= 'Senha'
-        keyboardType= 'visible-password'
+        placeholder='Senha'
+        keyboardType='visible-password'
         value={password}
         onChangeText={setPassword}
       />
@@ -88,8 +88,8 @@ export default function Location({ navigation }) {
       </TouchableOpacity>
 
       <View style={style.login}>
-        <Text  style={style.text}>Já possui conta?</Text>
-        <Text  style={style.loginText} onPress={() => navigation.navigate('Login')}> Login</Text>
+        <Text style={style.text}>Já possui conta?</Text>
+        <Text style={style.loginText} onPress={() => navigation.navigate('Login')}> Login</Text>
       </View>
     </View>
   );

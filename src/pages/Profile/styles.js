@@ -8,12 +8,23 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   textInput: {
-    width: Dimensions.get('screen').width - 20,
+    width: Dimensions.get('screen').width - 50,
     height: 40,
     borderRadius: 5,
     borderWidth: 1,
     marginBottom: 25,
     borderColor: '#c3c9cb',
+    paddingLeft: 10,
+    fontSize: 15,
+  },
+  textInputDisabled: {
+    width: Dimensions.get('screen').width - 50,
+    height: 40,
+    borderRadius: 5,
+    borderWidth: 1,
+    marginBottom: 25,
+    borderColor: '#c3c9cb',
+    backgroundColor: '#E1E1E1',
     paddingLeft: 10,
     fontSize: 15,
   },
@@ -36,7 +47,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.4,
   },
   removeButton: {
-    width: Dimensions.get('screen').width - 20,
+    width: Dimensions.get('screen').width - 50,
     height: 40,
     backgroundColor: '#E60202',
     alignItems: 'center',
@@ -47,7 +58,7 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.4,
   },
   updateButton: {
-    width: Dimensions.get('screen').width - 20,
+    width: Dimensions.get('screen').width - 50,
     height: 40,
     backgroundColor: '#1E90FF',
     alignItems: 'center',
@@ -64,7 +75,6 @@ const styles = StyleSheet.create({
   textButton: {
     color: 'white',
     fontWeight: 'bold',
-
   },
   signUp: {
     marginTop: 25,
@@ -73,6 +83,13 @@ const styles = StyleSheet.create({
   signUpText: {
     fontSize: 15,
     color: '#01337f'
+  },
+  iconUser: {
+    width: 80,
+    height: 80,
+    borderRadius: 50,
+    backgroundColor: '#1E90FF',
+    alignItems: 'center'
   }
 });
 
