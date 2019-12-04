@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { View, Image, Text, TextInput, Button, KeyboardAvoidingView } from 'react-native';
 
 import styles from './styles';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 export default function SignUp({ navigation }) {
   const [zipCode, setZipCode] = useState('')

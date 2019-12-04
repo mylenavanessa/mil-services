@@ -4,7 +4,7 @@ const styles = StyleSheet.create({
     container : {
       marginTop: -30,
       justifyContent: 'center',
-      alignItems: 'center'
+      alignItems: 'center',
     },
     textInput: {
       width: '100%',
@@ -33,7 +33,17 @@ const styles = StyleSheet.create({
       marginVertical: 20,
     },
     button: {
-      width: '30%',
+      height: 40,
+      width: '70%',
+      backgroundColor: '#1E90FF',
+      alignItems: 'center',
+      justifyContent: 'center',
+      borderRadius: 4,
+      shadowOffset:{  width: 0,  height: 3  },
+      shadowColor: 'black',
+      shadowOpacity: 0.4,
+      marginBottom: 5,
+      alignSelf: "center"
     },
     text: {
       fontSize: 15,
@@ -43,7 +53,11 @@ const styles = StyleSheet.create({
     },
     viewInput: {
       width:'60%',
-    }
+    },
+    textButton: {
+      color: 'white',
+      fontWeight:'bold',
+    },
   });
   
   export default styles;

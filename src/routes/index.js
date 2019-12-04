@@ -9,7 +9,12 @@ import Person from '../pages/Person'
 import Home from '../pages/Home/'
 
 const Router = createStackNavigator({
-  Login,
+  Login: {
+    screen: Login,
+    navigationOptions: {
+      header: null
+    }
+  },
   Profile: {
     screen: Profile,
     navigationOptions: navigationOptions,
